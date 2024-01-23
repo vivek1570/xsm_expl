@@ -1,12 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,c;
-    int max;
-    if(a>b)
-    max=a;
-    else max=b;
-    if(c>max)
-    max=c;
-
+    int n;
+    scanf("%d",&n);
+    int maxi=-1000;
+    int i=0;
+    while(i<n)
+    {
+        int x;
+        scanf("%d",&x);
+        maxi=max(maxi,x);
+    }
+    return maxi;
+}
+int max(int x,int y)
+{
+    if(x>y)
+    return x;
+    else return y;
 }
